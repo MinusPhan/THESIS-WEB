@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <!-- ======= Styles ====== -->
+    <link rel="shortcut icon" href="assets/imgs/Icon/Control.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li></li>
+                <li>
+                    <a href="Home.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Dashboard.html">
+                        <span class="icon">
+                            <ion-icon name="speedometer"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="game-controller"></ion-icon>
+                        </span>
+                        <span class="title">Control</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="History.html">
+                        <span class="icon">
+                            <ion-icon name="time"></ion-icon>
+                        </span>
+                        <span class="title">History</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contact.html">
+                        <span class="icon">
+                            <ion-icon name="information-circle"></ion-icon>
+                        </span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+
+                <div class="personal">
+                    <li></li>
+                    <li class="no-hover">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="ellipse" style="color: green;" id="Gateway"></ion-icon>
+                            </span>
+                            <span class="title">Gateway</span>
+                        </a>
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <a href="Acccount.html">
+                            <span class="icon">
+                                <ion-icon name="person-circle"></ion-icon>
+                            </span>
+                            <span class="title" id="Account">Account</span>
+                        </a>
+                    </li>
+                </div>
+        </div>
+    </div>
+
+    <!-- =============== Main ================ -->
+    <div class="main">
+
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+
+        <div class="container2">
+            <header>
+                <h1>Control</h1>
+            </header>
+            <main>
+
+                <div class="row">
+
+                    <!-- =============== CB ================ -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header1">
+                                <h2>Total control</h2>
+                            </div>
+                            <div class="card-body2">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Turn ON/OFF all device</h4>
+                                    <div id="relayOnOff">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitchOnOff">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Audio</h4>
+                                    <div id="relayAudio">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitchAudio">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4" style="margin-left: 0.9rem;">
+                        <div class="card">
+                            <div class="card-header1">
+                                <h2>Device control</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Relay 1</h4>
+                                    <div id="relay1">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitch1">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Relay 2</h4>
+                                    <div id="relay2">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitch2">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Relay 3</h4>
+                                    <div id="relay3">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitch3">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4>Relay 4</h4>
+                                    <div id="relay4">
+                                        <label class="switch">
+                                            <input type="checkbox" id="toggleSwitch4">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="margin-top: 1rem; display: flex;">
+                                    <h4>Area: </h4>
+                                    <input type="number" id="area" placeholder="Area" style="margin-left: 1rem;">
+                                </div>
+                                <div style="margin-top: 1rem; display: flex;">
+                                    <h4>Node: </h4>
+                                    <input type="number" id="node" placeholder="Node" style="margin-left: 0.7rem;">
+                                </div>
+                            </div>
+                            <button class="Submit" id="Submit">Submit</button>
+                            <button class="Status" id="Status">Status</button>
+                        </div>
+                    </div>
+                    <div class="column col-md-6">
+                        <div class="card">
+                            <div class="card-header1">
+                                <h2>History</h2>
+                            </div>
+                            <div class="card-body" style="height: 355px;">
+                                <div id="table-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </main>
+    </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="assets/js/Control.js"></script>
+</body>
+
+</html>
