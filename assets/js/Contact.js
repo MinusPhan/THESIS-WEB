@@ -108,7 +108,7 @@ window.onload = function () {
             "Test": 0
           });
           swal(
-            "",
+            "Alert",
             "Unable to connect to the gateway",
             "warning"
           )
@@ -134,7 +134,7 @@ window.onload = function () {
     var Disconnect = snapshot.val();
     if (Disconnect["Disconnect"] == 1 && Disconnect["Confirm"] == 0) {
       swal(
-        "",
+        "Alert",
         "Area " + Disconnect["Area"] + ", Node " + Disconnect["Node"] + " disconnected from the server",
         "warning"
       ).then((value) => {
