@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- ======= Styles ====== -->
+    <link rel="shortcut icon" href="assets/imgs/Icon/dashboard.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li></li>
+                <li>
+                    <a href="Home.html">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="speedometer"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="Control.html">
+                        <span class="icon">
+                            <ion-icon name="game-controller"></ion-icon>
+                        </span>
+                        <span class="title">Control</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="History.html">
+                        <span class="icon">
+                            <ion-icon name="time"></ion-icon>
+                        </span>
+                        <span class="title">History</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="Contact.html">
+                        <span class="icon">
+                            <ion-icon name="information-circle"></ion-icon>
+                        </span>
+                        <span class="title">Contact</span>
+                    </a>
+                </li>
+
+                <div class="personal">
+                    <li></li>
+                    <li class="no-hover">
+                        <a href="#">
+                            <span class="icon">
+                                <ion-icon name="ellipse" style="color: green;" id="Gateway"></ion-icon>
+                            </span>
+                            <span class="title">Gateway</span>
+                        </a>
+                    </li>
+
+                    <li style="margin-bottom: 1rem;">
+                        <a href="Acccount.html">
+                            <span class="icon">
+                                <ion-icon name="person-circle"></ion-icon>
+                            </span>
+                            <span class="title" id="Account">Account</span>
+                        </a>
+                    </li>
+                </div>
+        </div>
+    </div>
+
+    <!-- =============== Main ================ -->
+    <div class="main">
+
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline" class="bar"></ion-icon>
+            </div>
+        </div>
+
+        <div class="container2">
+            <header>
+                <h1>Dashboard</h1>
+            </header>
+            <main>
+                <div style="display: block; margin-left: 4rem;">
+                    <div class="choose">
+                        <div style="margin-top: 0.5rem; display: flex;">
+                            <h4 style="margin-right: 2rem;">Choose Area: </h4>
+                            <input type="number" id="area" style="width: 20%;" placeholder="Area">
+                        </div>
+                        <div style="margin-top: 0.5rem; margin-bottom: 1rem; display: flex;">
+                            <h4 style="margin-right: 1.7rem;">Choose Node:</h4>
+                            <input type="text" id="node" style="width: 20%;" placeholder="Node">
+                        </div>
+                    </div>
+                    <div class="dropdown-content">
+                        <li>
+                            <a href="#" class="droplist" id="Node1-10">
+                                <span class="link_name">Node 1 - 10</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node11-20">
+                                <span class="link_name">Node 11 - 20</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node21-30">
+                                <span class="link_name">Node 21 - 30</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node31-40">
+                                <span class="link_name">Node 31 - 40</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node41-50">
+                                <span class="link_name">Node 41 - 50</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node51-60">
+                                <span class="link_name">Node 51 - 60</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node61-70">
+                                <span class="link_name">Node 61 - 70 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="droplist" id="Node71-80">
+                                <span class="link_name">Node 71 - 80</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node81-90">
+                                <span class="link_name">Node 81 - 90</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node91-100">
+                                <span class="link_name">Node 91 - 100</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node101-110">
+                                <span class="link_name">Node 101 - 110</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node111-120">
+                                <span class="link_name">Node 111 - 120</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node121-130">
+                                <span class="link_name">Node 121 - 130</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="droplist" id="Node131-140">
+                                <span class="link_name">Node 131 - 140 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="droplist" id="Node141-150">
+                                <span class="link_name">Node 141 - 150</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node151-160">
+                                <span class="link_name">Node 151 - 160</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node161-170">
+                                <span class="link_name">Node 161 - 170</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node171-180">
+                                <span class="link_name">Node 171 - 180</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node181-190">
+                                <span class="link_name">Node 181 - 190</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node191-200">
+                                <span class="link_name">Node 191 - 200</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node201-210">
+                                <span class="link_name">Node 201 - 210 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="droplist" id="Node211-220">
+                                <span class="link_name">Node 211 - 220</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node221-230">
+                                <span class="link_name">Node 221 - 230</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node231-240">
+                                <span class="link_name">Node 231 - 240</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" class="droplist" id="Node241-250">
+                                <span class="link_name">Node 241 - 250</span>
+                            </a>
+                        </li>
+                    </div>
+                    <button class="Submit1" id="Submit">Submit</button>
+                </div>
+
+                <div class="row1" id="row1">
+
+                    <!-- =============== Node1 ================ -->
+                    <div class="col-md-2" id="Node1">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-1">Node 1</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-nhietdo">None </h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-doam">None </h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N1-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N1-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N1-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- =============== Node2 ================ -->
+                    <div class="col-md-2" id="Node2">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-2">Node 2</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N2-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N2-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N2-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 3 ================ -->
+                    <div class="col-md-2" id="Node3">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-3">Node 3</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N3-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N3-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N3-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- =============== Node 4 ================ -->
+                    <div class="col-md-2" id="Node4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-4">Node 4</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N4-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N4-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N4-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 5 ================ -->
+                    <div class="col-md-2" id="Node5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-5">Node 5</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N5-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N5-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N5-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row2" id="row2">
+                    <!-- =============== Node 6 ================ -->
+                    <div class="col-md-2" id="Node6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-6">Node 6</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N6-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N6-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N6-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 7 ================ -->
+                    <div class="col-md-2" id="Node7">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-7">Node 7</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N7-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N7-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N7-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 8 ================ -->
+                    <div class="col-md-2" id="Node8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-8">Node 8</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N8-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N8-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N8-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 9 ================ -->
+                    <div class="col-md-2" id="Node9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-9">Node 9</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N9-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N9-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N9-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =============== Node 10 ================ -->
+                    <div class="col-md-2" id="Node10">
+                        <div class="card">
+                            <div class="card-header">
+                                <h2 id="Name-Node-10">Node 10</h2>>
+                            </div>
+                            <div class="card-body">
+                                <div class="dashboard-text" style="margin-top: 0.5rem;">
+                                    <h4> Temperature: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-nhietdo">None</h4>
+                                        <h4>°C</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Humanity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-doam">None</h4>
+                                        <h4>%</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Luminosity: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-anhsang">None</h4>
+                                        <h4>Lux</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM1: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-PM1">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM2.5: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-PM2-5">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> PM10: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-PM10">None</h4>
+                                        <h4>µg/m³</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> CO2: </h4>
+                                    <div style="display: flex;">
+                                        <h4 id="N10-CO2">None</h4>
+                                        <h4>ppm</h4>
+                                    </div>
+                                </div>
+                                <div class="dashboard-text">
+                                    <h4> Fire: </h4>
+                                    <h4 id="N10-Fire">None</h4>
+                                </div>
+                                <div class="dashboard-text" style="margin-bottom: 1rem;">
+                                    <h4> Timestamp: </h4>
+                                    <h4 id="N10-Time">None</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+    <script src="assets/js/Dashboard.js"></script>
+</body>
+
+</html>

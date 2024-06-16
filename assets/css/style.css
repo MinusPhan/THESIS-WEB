@@ -1,0 +1,433 @@
+/* =========== Google Fonts ============ */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* =============== Globals ============== */
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2a2185;
+  --white: #fff;
+  --gray: #f5f5f5;
+  --black1: #222;
+  --black2: #999;
+  --active-icon-color: var(--blue);
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+/* =============== Navigation ================ */
+.navigation {
+  position: fixed;
+  width: 80px;
+  height: 100%;
+  background: var(--black1);
+  border-left: 10px solid var(--black1);
+  transition: 0.5s;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.navigation.active {
+  width: 300px;
+}
+
+.personal {
+  position: fixed;
+  bottom: 0;
+  width: 70px;
+  border-top: solid 2px var(--black2);
+  transition: 0.5s;
+  margin-right: 10px;
+}
+
+.personal.active {
+  width: 290px;
+}
+
+.navigation ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navigation ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+  background-color: var(--black2);
+}
+
+.navigation ul li.active-icon {
+  background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+.navigation ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a,
+.navigation ul li.active-icon a {
+  color: var(--blue);
+}
+
+.navigation ul li a .icon {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+  font-size: 1.75rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.navigation ul li a .title {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.navigation ul li.no-hover:hover,
+.navigation ul li.no-hover.hovered {
+  background-color: transparent;
+}
+
+.navigation ul li.no-hover:hover a,
+.navigation ul li.no-hover.hovered a,
+.navigation ul li.no-hover.active-icon a {
+  color: var(--white);
+}
+
+.navigation ul li.no-hover:hover a::before,
+.navigation ul li.no-hover.hovered a::before,
+.navigation ul li.no-hover.active-icon a::before,
+.navigation ul li.no-hover:hover a::after,
+.navigation ul li.no-hover.hovered a::after,
+.navigation ul li.no-hover.active-icon a::after {
+  box-shadow: none;
+}
+
+/* --------- curve outside ---------- */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--black2);
+  pointer-events: none;
+}
+
+.navigation ul li.active-icon a::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--black2);
+  pointer-events: none;
+}
+
+.navigation ul li.active-icon a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+/* --------------- Main --------------- */
+.main {
+  position: absolute;
+  width: calc(100% - 80px);
+  left: 80px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.main.active {
+  width: calc(100% - 300px);
+  left: 300px;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: trung tâm;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.toggle .line {
+  width: 30px;
+  height: 2px;
+  background: var(--white);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.toggle .line:nth-child(1) {
+  top: 0;
+}
+
+.toggle .line:nth-child(2) {
+  top: 6px;
+}
+
+.toggle .line:nth-child(3) {
+  top: 12px;
+}
+
+.toggle.active .line:nth-child(1) {
+  top: 6px;
+  transform: rotate(45deg);
+}
+
+.toggle.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle.active .line:nth-child(3) {
+  top: 6px;
+  transform: rotate(-45deg);
+}
+
+.main-content {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--black1);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 80px);
+  background: var(--black1);
+  color: var(--white);
+  padding: 10px;
+  text-align: center;
+}
+
+.footer a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* -------------------------Home--------------------------- */
+.home img {
+  width: 150px;
+  height: 150px;
+  margin-left: 78vw;
+}
+
+.home h1 {
+  text-align: center;
+}
+
+.name1 {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 40px;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dong_ho #thoi_gian {
+  display: flex;
+}
+
+#dong_ho #thoi_gian div {
+  position: relative;
+  margin: 0 5px;
+}
+
+.time {
+  margin-top: 6rem;
+  margin-right: 4vw;
+  display: flex;
+  justify-content: right;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+#dong_ho #thoi_gian div span {
+  color: white;
+  align-items: center;
+  font-size: 5rem;
+}
+
+#lich #ngaythangnam {
+  display: flex;
+}
+
+#lich #ngaythangnam div {
+  position: relative;
+  margin: 0 5px;
+}
+
+.day {
+  margin-right: 2vw;
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: right;
+  text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+#lich #ngaythangnam div span {
+  color: white;
+  align-items: center;
+  font-size: 30px;
+}
+
+@media (max-width: 425px) {
+  .home img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .home h1 {
+    font-size: 130%;
+    max-width: 90%;
+  }
+
+  #dong_ho #thoi_gian div span {
+    font-size: 2rem;
+  }
+
+  .time {
+    margin-right: 3rem;
+  }
+
+  #lich #ngaythangnam div span {
+    font-size: 1rem;
+  } 
+
+  .day {
+    margin-right: 2rem;
+  }
+
+  .bar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .home img {
+    width: 100px;
+    height: 100px;
+    margin-left: 65%;
+  }
+
+  .home h1 {
+    font-size: 130%;
+    max-width: 90%;
+  }
+
+  #dong_ho #thoi_gian div span {
+    font-size: 2rem;
+  }
+
+  .time {
+    margin-right: 15%;
+  }
+
+  #lich #ngaythangnam div span {
+    font-size: 1rem;
+  } 
+
+  .day {
+    margin-right: 8%;
+  }
+}
