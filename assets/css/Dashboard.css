@@ -851,6 +851,10 @@ h3 {
     margin-right: 0.1rem;
   }
 
+  .Submit {
+    margin-left: -0.1rem;
+  }
+
   .choose h4 {
     margin-left: -3rem;
   }
