@@ -156,7 +156,7 @@ window.onload = function () {
                 'Node': 0,
             });
 
-            if (localStorage.getItem('AlertGateway') == 'True' || !localStorage.getItem('AlertGateway')) {
+            if (localStorage.getItem('AlertGateway') == 'True') {
                 swal(
                     "Alert",
                     "Unable to connect to the gateway",
