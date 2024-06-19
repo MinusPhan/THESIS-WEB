@@ -253,7 +253,7 @@ window.onload = function () {
             gateway.style.color = "green";
             localStorage.setItem('AlertGateway', 'True')
         } else if (Disconnect["Test"] == 0) {
-            if (localStorage.getItem('AlertGateway') == 'True' || !localStorage.getItem('AlertGateway')) {
+            if (localStorage.getItem('AlertGateway') == 'True') {
                 swal(
                     "Alert",
                     "Unable to connect to the gateway",
